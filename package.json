@@ -4,7 +4,8 @@
   "description": "site da casa do codigo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
   },
   "author": "Rogerio Aguiar",
   "license": "ISC",
@@ -20,5 +21,8 @@
   "devDependencies": {
     "mocha": "^5.0.1",
     "supertest": "^3.0.0"
+  },
+  "engines": {
+    "node": "9.5.0"
   }
 }

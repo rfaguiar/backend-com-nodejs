@@ -7,7 +7,7 @@ app.set('io', io);
 
 var porta = process.env.PORT || 3000;
 
-app.listen(porta, function() {
+var server = app.listen(porta, function() {
     var host = server.address().address;
     var port = server.address().port;
 
