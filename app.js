@@ -5,6 +5,11 @@ var io = require('socket.io')(http);
 
 app.set('io', io);
 
-app.listen(3000, function() {
-    console.log('Servidor Rodando');
+var porta = process.env.PORT || 3000;
+
+app.listen(porta, function() {
+    var host = server.address().address;
+    var port = server.address().port;
+
+    console.log('Example app listening at http://%s:%s', host, port);
 });

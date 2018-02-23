@@ -20,13 +20,13 @@ function createDBConnection() {
             database: 'casadocodigo_nodejs_test'
         });
     } else if (process.env.NODE_ENV == 'production') {
-        var urlDb = process.env.CLEARDB_DATABASE_URL;
-        var grupos = urlDb.match(/mysql:\/\/(.*):(.*)@(.*)\/(.*)?reconnect=true/);
+        var url = process.env.CLEARDB_DATABASE_URL;
+        var grupos = url.match(/mysql:\/\/(.*):(.*)@(.*)\/(.*)\?/);
         return mysql.createConnection({
-            host:grupos[2],
-            user:grupos[0],
-            password:grupos[1],
-            database: grupos[3]
+            host:grupos[3],
+            user:grupos[1],
+            password:grupos[2],
+            database:grupos[4]
         });
     }
 }
